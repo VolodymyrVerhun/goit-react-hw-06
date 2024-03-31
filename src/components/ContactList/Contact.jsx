@@ -1,7 +1,5 @@
 import { IoPerson, IoCall } from "react-icons/io5";
 
-// import { useDispatch } from "react-redux";
-
 import style from "./ContactList.module.css";
 
 export default function Contact({ contact, deleteContact }) {
