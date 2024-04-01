@@ -1,8 +1,11 @@
 import { IoPerson, IoCall } from "react-icons/io5";
 
+import { deleteContact } from "../../redux/contactsSlice";
 import style from "./ContactList.module.css";
+import { useDispatch } from "react-redux";
 
-export default function Contact({ contact, deleteContact }) {
+export default function Contact({ contact }) {
+  const dispatch = useDispatch();
   return (
     <li className={style.item}>
       <div>
@@ -15,7 +18,7 @@ export default function Contact({ contact, deleteContact }) {
       </div>
       <button
         onClick={() => {
-          deleteContact(contact.id);
+          dispatch(deleteContact(contact.id));
         }}
         className={style.btn}
       >
